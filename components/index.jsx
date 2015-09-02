@@ -2,22 +2,28 @@
 'use strict'
 
 var React = require('react');
-var TencentMap = require('../components/tencentMap/map');
-
-var markers =  [{x:116,y:30,description:'This is a description'},
-				{x:117,y:31,description:'This is a description'},
-				{x:118,y:32,description:'This is a description'},
-				{x:119,y:34,description:'This is a description'},
-				{x:120,y:33,description:'This is a description'},
-				{x:121,y:35,description:'This is a description'}];
-
-React.renderComponent(
-	<div>
-
-	<TencentMap id="1"  mapData={markers}  height={"300px"} width={"300px"} ></TencentMap>
-
-	</div>, document.getElementById('content1'));
+require('bootstrap');
+var TencentMap = require('./tencentMap/map');
+var Tab = require("./tabs/tab");
+var Tabs = require("./tabs/tabs");
 
 
-React.renderComponent(<div><TencentMap id="2"  mapData={markers}  height={"500px"} width={"500px"} > </TencentMap></div>, document.getElementById('content2'));
+React.renderComponent(<div>
+	<div className="content">
+	<span>地图</span>
+	<TencentMap id="2"   height={"500px"} width={"500px"} > </TencentMap>
+	<div className="col-xs-2">
+		<Tabs maxHeight="300px">
+	        <Tab title="111" id="1">
+	            <p>456</p><p>456</p><p>456</p><p>456</p><p>456</p><p>456</p>
+	        </Tab>
+	        <Tab title="222" id="2" isActive={true}>
+	            <p>789</p>
+	        </Tab>
+	    </Tabs>
+    </div>
+    </div>
+	
+
+</div>, document.getElementById('content'));
 

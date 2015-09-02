@@ -218,7 +218,11 @@ var TencentMap = React.createClass({
 		if(this.state.mapReady){
 			this.setNewMarks(this.state.mapData);
 		}
-		return <div className={this.props.cssClass} id={"tencentMapDiv"+this.props.id} style={{"height":this.props.height,"width":this.props.width}}></div>;
+		return (<div>
+				<div className={this.props.cssClass} id={"tencentMapDiv"+this.props.id} style={{"height":this.props.height,"width":this.props.width}}>
+				</div>
+				<p>89898</p>
+			</div>);
 	}
 
 });

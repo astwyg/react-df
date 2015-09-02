@@ -2,44 +2,13 @@
 
 <html>
 <head>
-    <title>TencentMapTest</title>
-    <!-- include react -->
-    <script src="./node_modules/react/dist/react-with-addons.js"></script>
-
-    <style type="text/css">
-    html,body{
-        width:500px;
-        height:500px;
-    }
-    *{
-        margin:0px;
-        padding:0px;
-    }
-    
-  
-    </style>
-   
-
+    <title>demo</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
-    <div id="content1">
-        <!-- this is where the root react component will get rendered -->
-    </div>
-
-    <div id="content2">
-        <!-- this is where the root react component will get rendered -->
-    </div>
-
-    <div id="example" style="background-color: red;width:200px;height:200px">12313131</div>
-
-    <div id="container111"></div>
-    <div id="container222"></div>
-    <!-- include the webpack-dev-server script so our scripts get reloaded when we make a change -->
-    <!-- we'll run the webpack dev server on port 8090, so make sure it is correct -->
-    <script src="http://localhost:8090/webpack-dev-server.js"></script>
-
-    <!-- include the bundle that contains all our scripts, produced by webpack -->
-    <!-- the bundle is served by the webpack-dev-server, so serve it also from localhost:8090 -->
-    <script type="text/javascript" src="http://localhost:8090/assets/bundle.js"></script>
+    <h2>基本组件测试页面</h2>
+    <div id="content"><!--Components will render here--></div>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/static/bundle.js"></script>
 </body>
 </html>
