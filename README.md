@@ -9,3 +9,4 @@ what is include
 -----
 1. using webpack to pack js files and run debug server.
 2. using yuidoc to creat documents.
+3. using npm to download and manage packages.
