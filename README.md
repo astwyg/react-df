@@ -1,1 +1,11 @@
 # react-df
+=======
+what is this
+------
+df is short for develop framework. we want to provide a series of tools helping develop and release project using React.
+Also, tools are sample configed.
+
+what is include
+-----
+1. using webpack to pack js files and run debug server.
+2. using yuidoc to creat documents.
