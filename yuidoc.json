@@ -1,0 +1,9 @@
+{
+    "name": "react-df",
+    "description": "df is short for develop framework. we want to provide a series of tools helping develop and release project using React. Also, tools are sample configed.",
+    "version": "0.0.1",
+    "url": "https://github.com/astwyg/react-df.git",
+    "options": {
+        "outdir": "./apidocs"
+    }
+}
