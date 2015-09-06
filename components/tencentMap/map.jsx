@@ -3,7 +3,7 @@
  * @module TencentMap
  * @example
  * var markers =  [{x:116,y:30,description:'This is a description'},{x:117,y:31,description:'This is a description'}] <br/>
- * <TencentMap id="map1" mapData={markers} height={"300px"} width={"300px"} ></TencentMap>
+ * <TencentMap id="map1" mapData={markers} height={"300px"} width={"300px"} zoom={13} centerPoint={{x:116.397128,y:39.916527}}></TencentMap>
  * 
  */
 var React = require('react');
@@ -16,6 +16,8 @@ var $ = require('jQuery');
  * @param {String} id 组件id
  * @param {String} height 高度
  * @param {String} width  宽度
+ * @param {int} zoom  放大倍数，默认为7
+ * @param {Object} centerPoint  传入初始化地图中心点位置 x:经度,y:维度 eg:centerPoint={{x:116.397128,y:39.916527}} 默认中心点为北京天安门
  * @param {Object} mapData 传入初始化位置标签 x:经度,y:维度,description:描述 eg:[{x:116,y:30,description:'This is a description'},{x:117,y:31,description:'This is a description'}]
  * 
  */
@@ -39,6 +41,7 @@ var TencentMap = React.createClass({
 			mapData:[],
 			//地图是否已经加载完毕
 			mapReady:false,
+			zoom:7
 		};
 	},
 
@@ -49,10 +52,20 @@ var TencentMap = React.createClass({
 	 * @method initTencentMap
 	 */
  	initTencentMap : function() {
-	    //默认中心点
-	    var centerPoint = new qq.maps.LatLng(39.916527,116.397128);
+	    
+	    var centerPoint;
+	    if(this.props.centerPoint){
+	    	//设置中心点
+	    	centerPoint = new qq.maps.LatLng(this.props.centerPoint.y,this.props.centerPoint.x);
+	    }else{
+	    	//默认中心点
+	    	centerPoint = new qq.maps.LatLng(39.916527,116.397128);
+	    }
+	    //设置放大倍数
+	    var zoom = this.props.zoom||this.state.zoom;
+
 	    var options = {
-	    	zoom: 7,
+	    	zoom: zoom,
 	    	center: centerPoint,
 	    	mapTypeId: qq.maps.MapTypeId.ROADMAP
 	    };
