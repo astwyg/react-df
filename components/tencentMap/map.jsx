@@ -221,7 +221,6 @@ var TencentMap = React.createClass({
 		return (<div>
 				<div className={this.props.cssClass} id={"tencentMapDiv"+this.props.id} style={{"height":this.props.height,"width":this.props.width}}>
 				</div>
-				<p>89898</p>
 			</div>);
 	}
 

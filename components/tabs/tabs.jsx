@@ -50,7 +50,7 @@ var Tabs=React.createClass({
         		<ul className="nav nav-tabs">
         			{ul}
         		</ul>
-                <div className="tab-content" style={{"max-height":this.props.maxHeight}}>
+                <div className="tab-content need-scroll" style={{"max-height":this.props.maxHeight}}>
         		  {this.props.children}
                 </div>
 			</div>);

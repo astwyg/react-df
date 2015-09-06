@@ -18,6 +18,11 @@ module.exports = {
                 test: /\.jsx$/,
                 loaders: ['react-hot','jsx-loader?insertPragma=React.DOM&harmony'],
                 include: path.join(__dirname, 'components')
+            },
+            {
+                test: /\.js$/,
+                loaders: ['react-hot','jsx-loader?insertPragma=React.DOM&harmony'],
+                include: path.join(__dirname, 'components')
             }
         ]
     },
