@@ -14,7 +14,7 @@ var Tabs = require("./tabs/tabs");
 React.renderComponent(<div>
 	<div className="content">
 	<span>地图</span>
-	<TencentMap id="2"   height={"500px"} width={"500px"} > </TencentMap>
+	<TencentMap id="2"   height={"500px"} width={"500px"} zoom={7} centerPoint={{x:50,y:39.916527}}> </TencentMap>
 	<div className="col-xs-2">
 		<Tabs maxHeight="300px">
 	        <Tab title="111" id="1">
