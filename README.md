@@ -15,5 +15,5 @@ what is include
 how to start
 -----
 1. `npm install` 
-2. `npm run start`
-3. open your browser and go to `localhost:8090`
+2. `npm start`
+3. open your browser and go to `http://127.0.0.1:3000/webpack-dev-server/client?http://0.0.0.0:3000`

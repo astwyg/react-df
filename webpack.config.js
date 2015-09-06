@@ -18,11 +18,7 @@ module.exports = {
                 test: /\.jsx$/,
                 loaders: ['react-hot','jsx-loader?insertPragma=React.DOM&harmony'],
                 include: path.join(__dirname, 'components')
-            },
-            // { //jquery show expose to window, but these codes are not work
-            //     test: require.resolve('jquery'), 
-            //     loader: 'expose?jQuery'
-            // }
+            }
         ]
     },
     resolve: {

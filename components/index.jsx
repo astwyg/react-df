@@ -1,11 +1,14 @@
 /** @jsx React.DOM */
 'use strict'
 
+var jQuery = require("jQuery");
+window.jQuery = jQuery;
 var React = require('react');
 require('bootstrap');
 var TencentMap = require('./tencentMap/map');
 var Tab = require("./tabs/tab");
 var Tabs = require("./tabs/tabs");
+
 
 
 React.renderComponent(<div>
