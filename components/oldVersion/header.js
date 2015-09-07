@@ -1,4 +1,4 @@
-/** @jsx React.DOM */
+
 var React = require('react');
 var PageHeader = require('./page-header');
 var Breadcrumb = require('./breadcrumb');

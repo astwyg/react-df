@@ -16,13 +16,15 @@ module.exports = {
         loaders: [
             {
                 test: /\.jsx$/,
-                loaders: ['react-hot','jsx-loader?insertPragma=React.DOM&harmony'],
-                include: path.join(__dirname, 'components')
+                exclude: /node_modules/,
+                include: path.join(__dirname, 'components'),
+                loader: 'react-hot!babel-loader!jsx-loader?harmony'
             },
             {
                 test: /\.js$/,
-                loaders: ['react-hot','jsx-loader?insertPragma=React.DOM&harmony'],
-                include: path.join(__dirname, 'components')
+                exclude: /node_modules/,
+                include: path.join(__dirname, 'components'),
+                loader: 'react-hot!babel-loader!jsx-loader?harmony'
             }
         ]
     },

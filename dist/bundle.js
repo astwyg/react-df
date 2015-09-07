@@ -695,7 +695,7 @@
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(10), RootInstanceProvider = __webpack_require__(4), ReactMount = __webpack_require__(9), React = __webpack_require__(12); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
-	/** @jsx React.DOM *//** @jsx React.DOM */
+	
 	'use strict'
 	
 	var React = __webpack_require__(12);
@@ -851,7 +851,7 @@
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(10), RootInstanceProvider = __webpack_require__(4), ReactMount = __webpack_require__(9), React = __webpack_require__(12); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
-	/** @jsx React.DOM *//**
+	/**
 	 * 地图模块(使用腾讯地图)
 	 * @module TencentMap
 	 * @example

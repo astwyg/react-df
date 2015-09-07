@@ -127,7 +127,7 @@ var TencentMap = React.createClass({
 	loadMapScript : function() {
 
 	 	if(!TencentMap.lock){
-	 		lock = true;
+	 		TencentMap.lock = true;
 
 	 		/**
 	 		 * window全局方法,在地图脚本加载完后回调，同时定义2个全局方法方便设置坐标点

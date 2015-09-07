@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-'use strict'
 
 //import 3rd party dependents
 var jQuery = require("jQuery");
@@ -16,8 +14,8 @@ var Select=require("./html/select");
 var ExpressionSelect=require("./html/expression");
 var Autocomplete=require("./html/autocomplete");
 
-//import ES6 patch
-require("../utils/webpackPatch");
+//import ES6 patch ,no longer use, use babel-loader instead
+//require("../utils/webpackPatch");
 
 //import combined components
 var BSSPanel=require("./panel/panel");
@@ -45,7 +43,7 @@ var queryMetadata= function(param){
     };
 
 
-React.renderComponent(<div>
+React.render(<div>
 	<hr /><hr />
 	<div className="base-components">
 		<h4>基本组件:</h4>
