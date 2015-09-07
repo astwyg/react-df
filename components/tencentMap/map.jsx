@@ -14,8 +14,8 @@ var $ = require('jQuery');
  * @class TencentMap
  * @constructor
  * @param {String} id 组件id
- * @param {String} height 高度
- * @param {String} width  宽度
+ * @param {String} height 高度 默认300px
+ * @param {String} width  宽度 默认100%
  * @param {int} zoom  放大倍数，默认为7
  * @param {Object} centerPoint  传入初始化地图中心点位置 x:经度,y:维度 eg:centerPoint={{x:116.397128,y:39.916527}} 默认中心点为北京天安门
  * @param {Object} mapData 传入初始化位置标签 x:经度,y:维度,description:描述 eg:[{x:116,y:30,description:'This is a description'},{x:117,y:31,description:'This is a description'}]
@@ -41,6 +41,8 @@ var TencentMap = React.createClass({
 			mapData:[],
 			//地图是否已经加载完毕
 			mapReady:false,
+			mapHeight:"300px",
+			mapWidth:"100%",
 			zoom:7
 		};
 	},
@@ -206,10 +208,25 @@ var TencentMap = React.createClass({
 
 	},
 
+	//清除地图上的全部坐标点
+	clearAllMarks: function(){
+		//清除位置标记
+		var markersArray = this.state.mapData;
+		if (markersArray) {
+	        for (i in markersArray) {
+	            markersArray[i].setMap(null);
+	        }
+    	}
+	},
+
 	componentWillMount: function() {
-		//初始化地图数据
-		if(this.props.mapData){
-			this.state.mapData = this.props.mapData;
+		
+		if(this.props.height){
+			this.state.mapHeight = this.props.height;
+		}
+
+		if(this.props.width){
+			this.state.mapWidth = this.props.width;
 		}
 	},
 	
@@ -221,6 +238,7 @@ var TencentMap = React.createClass({
 	},
 
 	componentWillUpdate: function(nextProps, nextState) {
+
 		//初始化地图，这一步在加载完脚本后才执行
 		this.initTencentMap();
 	},
@@ -229,10 +247,15 @@ var TencentMap = React.createClass({
 	render: function() {
 		//判断地图是否已经加载成功，如果成功，则初始化地图坐标
 		if(this.state.mapReady){
-			this.setNewMarks(this.state.mapData);
+			//清楚地图上的坐标点
+			this.clearAllMarks();
+			//保存坐标点
+			this.state.mapData = this.props.mapData;
+			//设置坐标点
+			this.setNewMarks(this.props.mapData);
 		}
 		return (<div>
-				<div className={this.props.cssClass} id={"tencentMapDiv"+this.props.id} style={{"height":this.props.height,"width":this.props.width}}>
+				<div className={this.props.cssClass} id={"tencentMapDiv"+this.props.id} style={{"height":this.state.mapHeight,"width":this.state.mapWidth}}>
 				</div>
 			</div>);
 	}
