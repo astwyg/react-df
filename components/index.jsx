@@ -1,4 +1,4 @@
-/** @jsx React.DOM */
+
 'use strict'
 
 //import 3rd party dependents
@@ -45,7 +45,7 @@ var queryMetadata= function(param){
     };
 
 
-React.renderComponent(<div>
+React.render(<div>
 	<hr /><hr />
 	<div className="base-components">
 		<h4>基本组件:</h4>

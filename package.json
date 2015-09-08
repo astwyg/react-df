@@ -9,7 +9,7 @@
   "author": "",
   "license": "BSD",
   "dependencies": {
-    "react": "~0.11.2"
+    "react": "^0.13.1"
   },
   "devDependencies": {
     "bootstrap": "^3.3.5",
@@ -17,7 +17,7 @@
     "jquery-ui": "^1.10.5",
     "jsx-loader": "~0.11.2",
     "react-hot-loader": "^1.3.0",
-    "webpack": "~1.4.4",
-    "webpack-dev-server": "~1.6.5"
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.10.1"
   }
 }
