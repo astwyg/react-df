@@ -1,6 +1,4 @@
 
-'use strict'
-
 //import 3rd party dependents
 var jQuery = require("jQuery");
 window.jQuery = jQuery;
@@ -16,8 +14,8 @@ var Select=require("./html/select");
 var ExpressionSelect=require("./html/expression");
 var Autocomplete=require("./html/autocomplete");
 
-//import ES6 patch
-require("../utils/webpackPatch");
+//import ES6 patch ,no longer use, use babel-loader instead
+//require("../utils/webpackPatch");
 
 //import combined components
 var BSSPanel=require("./panel/panel");
@@ -45,6 +43,9 @@ var queryMetadata= function(param){
     };
 
 
+ var markers =  [{x:116,y:40,description:'This is a description'},{x:117,y:40,description:'This is a description'}];
+
+
 React.render(<div>
 	<hr /><hr />
 	<div className="base-components">
@@ -69,7 +70,7 @@ React.render(<div>
     <div className="packed-components">
     	<h4>包装组件:</h4>
     	<p>地图:</p>
-    	<TencentMap id="2"   height={"500px"} width={"500px"} > </TencentMap>
+    	<TencentMap id="2"  mapData={markers}  height={"500px"} ref="myTencentMap"> </TencentMap>
     </div>
     <div className="packed-components">
       <h4>组合组件:</h4>
@@ -77,7 +78,7 @@ React.render(<div>
       <BSSPanel pageTitle = "示例Panel">
         <QueryPanel submitAction={queryMetadata} jsonFormat={true} okButtonName="查询(请看console)">
             <Input disName=" 示范输入:" name="demoInput"/>
-        </QueryPanel>
+        </QueryPanel>TencentMap.test(markers);
       </BSSPanel>
     </div>
 </div>, document.getElementById('content'));
