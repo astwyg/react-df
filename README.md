@@ -25,3 +25,26 @@ How to use the yuidoc to create documents
 0. please read the document < YUIDOC-README.md > 
 1. install yuidoc: npm install astwyg/yuidoc -g
 2. execute command in the root directory: in the root: yuidoc components -e '.js,.jsx'
+
+Notice
+------
+the components are under develop, so you may see many dirty codes in them.
+
+Known bugs
+------
+1. in packing, there are double warnings: 
+```WARNING in ./~/jquery/dist/jquery.js
+There is another module with an equal name when case is ignored.
+This can lead to unexpected behavior when compiling on a filesystem with other c
+ase-semantic.
+Rename module if multiple modules are expected or use equal casing if one module
+ is expected.
+
+WARNING in ./~/jQuery/dist/jquery.js
+There is another module with an equal name when case is ignored.
+This can lead to unexpected behavior when compiling on a filesystem with other c
+ase-semantic.
+Rename module if multiple modules are expected or use equal casing if one module
+ is expected.
+ ```
+ we still can not figure them.

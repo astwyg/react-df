@@ -1,7 +1,7 @@
 var $ = require('jquery');
 //var progressJS = require('Progress.js').progressJs;
 //var ActionUtils = require('./action-utils');
-var MessageBox=require("../components/message/message");
+var MessageBox=require("../message/message");
 
 var APIUtils = {
   request: function(req) {

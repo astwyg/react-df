@@ -5,8 +5,8 @@ var React=require("react/addons");
 
 var $ = require('jquery');
 //require("jquery-ui");
-var APIUtils = require('../../utils/api-utils');
-var AjaxUtils = require('../../utils/ajax');
+var APIUtils = require('../utils/api-utils');
+var AjaxUtils = require('../utils/ajax');
 /**
  *  <Autocomplete name="动态下拉" url="/api/test/ajax" />
  *  name:要显示的名称

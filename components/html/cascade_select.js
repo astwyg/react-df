@@ -10,7 +10,7 @@
  */
 var React=require("react/addons");
 var Select=require("./select");
-var AjaxUtils = require('../../utils/ajax');
+var AjaxUtils = require('../utils/ajax');
 var CascadeSelect=React.createClass({
 getInitialState : function(){
     return {

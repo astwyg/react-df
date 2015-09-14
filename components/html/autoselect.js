@@ -9,7 +9,7 @@
  */
 var React=require("react/addons");
 var Select=require("./select");
-var AjaxUtils = require('../../utils/ajax');
+var AjaxUtils = require('../utils/ajax');
 
 var AutoSelect=React.createClass({
     getInitialState : function(){

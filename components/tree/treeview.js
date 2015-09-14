@@ -5,7 +5,7 @@
 
 var React=require("react/addons");
 var treeCommonMixin = require("./treecommon");
-var Debug = require("../../common/debug");
+var Debug = require("../common/debug");
 
 /**
  * 使用说明

@@ -5,7 +5,7 @@
 
 var React = require('react/addons');
 var BSSForm = require('../html/form');
-var RegUtils = require('../../utils/reg-utils');
+var RegUtils = require('../utils/reg-utils');
 /**
  *  <Input disName="名称" doChange={this._doChange}  />
  *  disName:要显示的名称
