@@ -1,0 +1,22 @@
+.treeview-container {
+    overflow-x:hidden;
+    overflow-y:auto; 
+    display: table;
+}
+
+.treeview-node-container {
+    white-space: nowrap;
+}
+
+.treeview-cell-container {
+    display: inline-block;
+    width: 15px;
+    cursor:pointer ;
+    /* height: 20px; */
+    /* border: solid 1px #f2f2f2; */
+}
+
+.treeview-textbox-container {
+    display: inline-block;
+    cursor:pointer ;
+}

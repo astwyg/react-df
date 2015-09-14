@@ -56,10 +56,16 @@ var BSSForm=React.createClass({
             if(this.props.jsonFormat&& this.props.jsonFormat==true){
               var json={};
               var vs=param.split("&");
-              for(i in vs){
-                  var obj= vs[i].split("=");
-                  json[obj[0]]=obj[1];
-              };
+              if(vs.length>1){
+                for(var i in vs){
+                      var obj= vs[i].split("=");
+                      json[obj[0]]=obj[1];
+                  };
+              }else{
+                var obj= vs[0].split("=");
+                json[obj[0]]=obj[1];
+              }
+              
               this.props.submitAction(json);
           } else{
                 this.props.submitAction(param);

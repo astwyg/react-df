@@ -14,12 +14,14 @@ What is include
 
 How to start
 ------
-1. 'npm install' 
-2. 'npm start'
-3. open your browser and go to `http://127.0.0.1:3000/webpack-dev-server/client?http://0.0.0.0:3000`
+1. 'npm install webpack -g'
+2. 'npm install' 
+3. 'npm start'
+4.  open your browser and go to `http://127.0.0.1:3000/webpack-dev-server/client?http://0.0.0.0:3000`
+5. if you need packed js file , run `webpack`, the js file in `/dist/bundle.js`
 
 How to use the yuidoc to create documents
 ------
-0. read the documents of yuidoc at `http://yui.github.io/yuidoc/syntax/index.html`
+0. please read the document < YUIDOC-README.md > 
 1. install yuidoc: npm install astwyg/yuidoc -g
 2. execute command in the root directory: in the root: yuidoc components -e '.js,.jsx'

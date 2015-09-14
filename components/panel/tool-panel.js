@@ -3,10 +3,8 @@
      */
 var React=require("react/addons");
 
-var components = require('components');
-
-var Header = components.Header;
-var PortletHeader = components.PortletHeader;
+var Header = require('../oldVersion/header');
+var PortletHeader = require('../oldVersion/portlet-header');
 
 var ToolBarPanel=React.createClass({
     render:function(){

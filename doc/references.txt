@@ -1,2 +1,0 @@
-1. react-hot-loader documents: http://gaearon.github.io/react-hot-loader/getstarted/
-2. react-hot-loader demo: https://github.com/gaearon/react-hot-boilerplate/

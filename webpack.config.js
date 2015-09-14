@@ -17,12 +17,14 @@ module.exports = {
             {
                 test: /\.jsx$/,
                 exclude: /node_modules/,
+                //exclude: path.join(__dirname, 'node_modules'),
                 include: path.join(__dirname, 'components'),
                 loader: 'react-hot!babel-loader'
             },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
+                //exclude: path.join(__dirname, 'node_modules'),
                 include: path.join(__dirname, 'components'),
                 loader: 'react-hot!babel-loader'
             }

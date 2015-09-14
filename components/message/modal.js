@@ -1,10 +1,7 @@
 /**
  * Created by WangYG on 2015-07-22 13:07:03
  */
-
-require("bootstrap");
 var React=require("react/addons");
-var $ = require('jquery');
 var BSSForm = require("../html/form");
 /**
  *  <Modal title="i am title" body={this._modalBody} footer={this._ModalFooter}/>
@@ -17,6 +14,7 @@ var BSSForm = require("../html/form");
 var Modal=React.createClass({
     statics:{
         show:function(id){
+            console.log($("#"+id));
             $("#"+id).modal();
         },
         hide:function(id){

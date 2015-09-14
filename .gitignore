@@ -1,2 +1,4 @@
-node_modules
 /apidocs
+/node_modules
+/.idea
+/dist

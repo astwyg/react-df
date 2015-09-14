@@ -25,3 +25,86 @@
   margin-bottom: 3px;
   margin-top: 3px;
 }
+
+.form-control{
+  display: inline;
+}
+
+.floatR: {
+  float: right;
+}
+
+.mb-ok-btn{
+  text-align: right;
+}
+
+.page-size-left{
+  float: left;
+}
+
+.modal-body{
+  text-align: center;
+}
+
+.query-panel{
+  float: right;
+  padding: 10px;
+}
+
+.content-left{
+  text-align: left;
+  margin: auto;
+  display: table;
+}
+
+.tree-left{
+  float: left;
+  width:30%;
+
+}
+
+.table-right{
+  float: right;
+  width:70%;
+}
+
+.main-page{
+  overflow: hidden;
+}
+
+.h500px{
+  max-height: 500px;
+  overflow: auto;
+}
+
+th{
+    word-break: keep-all;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+td{
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+}
+
+td:hover{
+    max-width: 120px;
+    background-color: rgba(39, 45, 210, 0.23);
+    overflow: auto;
+    word-break: keep-all;
+    word-wrap: break-word;
+
+}
+
+.page-content{
+    min-height: auto;
+    overflow: auto;
+
+}
+
+.btn{
+  margin-left: 5px;
+}
