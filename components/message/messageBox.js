@@ -5,7 +5,7 @@
 var React=require("react/addons");
 var $ = require('jquery');
 var Modal=require("./modal");
-var Button=require("../button/button");
+var Button=require("../html/button");
 
 /**
  * <Button btnName="触发MessageBox" doAction={MessageBox.show.bind(null,"i am title","i am message")} cssClass="btn-info" />

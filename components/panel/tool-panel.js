@@ -3,14 +3,20 @@
      */
 var React=require("react/addons");
 
-var Header = require('../oldVersion/header');
-var PortletHeader = require('../oldVersion/portlet-header');
 
 var ToolBarPanel=React.createClass({
+	getDefaultProps : function(){
+    	return {
+    		title:"",
+    	}
+    },
     render:function(){
-        return (<PortletHeader title="">
-            {this.props.children}
-        </PortletHeader>)
+        return (<div className="portlet-header pam mbn">
+	              <div className="caption">{this.props.title}</div>
+	              <div className="actions">
+	                {this.props.children}
+	              </div>
+	            </div>)
     }
 });
 

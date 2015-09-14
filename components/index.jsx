@@ -4,7 +4,7 @@ var React = require('react');
 require('bootstrap');
 
 //import base components
-var Button=require("./button/button");
+var Button=require("./html/button");
 var Input = require("./html/input");
 var Tab = require("./tabs/tab");
 var Tabs = require("./tabs/tabs");

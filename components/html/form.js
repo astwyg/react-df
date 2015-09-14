@@ -3,7 +3,7 @@
  */
 
 var React=require("react/addons");
-var Button=require("../button/button");
+var Button=require("../html/button");
 var $=require("jquery");
 
 var BSSForm=React.createClass({
