@@ -2,7 +2,7 @@
  * @module Tabs
  */
 var React = require('react/addons');
-//var Debug = require("../common/debug");
+//var Debug = require("../utils/debug");
 
 /**
  * 标签页组件

@@ -1,5 +1,5 @@
 var React = require('react/addons');
-//var Debug = require("../common/debug");
+//var Debug = require("../utils/debug");
 
 var Tab=React.createClass({
     displayName:'Tab',
