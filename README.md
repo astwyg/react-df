@@ -1,6 +1,10 @@
 # react-df
 =======
 
+特点
+------
+极少依赖第三方组件, 不依赖"rc-XXX", 可定制能力强.
+
 What is this
 ------
 df is short for develop framework. we want to provide a series of tools helping develop and release project using React.
@@ -48,3 +52,16 @@ Rename module if multiple modules are expected or use equal casing if one module
  is expected.
  ```
  we still can not figure them.
+ ```
+
+Reference
+--------
+1. react-hot-loader documents: http://gaearon.github.io/react-hot-loader/getstarted/
+2. react-hot-loader demo: https://github.com/gaearon/react-hot-boilerplate/
+3. package a separate css file: http://webpack.github.io/docs/stylesheets.html#separate-css-bundle
+
+一些文件的说明
+----------
+*由于目前开发中使用webpack在内存中进行打包和调试, 最终发布使用gulp, 将此工程作为依赖引入发布工程的node_modules目录下. 这是暂时的解决方案*
+index.js: 目录放置在node_modules下时, 暴露`components/common.js使用`
+index.html: webpack打包时使用的基本html文件.

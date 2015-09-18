@@ -108,3 +108,11 @@ td:hover{
 .btn{
   margin-left: 5px;
 }
+
+.inline{
+  display: inline;
+}
+
+.block{
+  display: block;
+}

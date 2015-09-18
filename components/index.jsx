@@ -13,6 +13,9 @@ var ExpressionSelect=require("./html/expression");
 var Autocomplete=require("./html/autocomplete");
 var Treeview = require("./tree/treeview");
 var TreeWithTable = require("./tree/treeWithTable");
+var CheckboxGroup = require("./html/CheckboxGroup");
+var Checkbox = require("./html/Checkbox");
+var Textarea = require("./html/Textarea");
 
 //import ES6 patch ,no longer use, use babel-loader instead
 //require("../utils/webpackPatch");
@@ -107,23 +110,37 @@ var Demo = React.createClass({
   treeFlod : function(uid,status){
       console.log(uid+status);
   },
+  checkboxClick: function(name,value){
+      console.log(name+"|"+value);
+  },
+  textareaChange: function(value){
+      console.log(value);
+  },
   render:function(){
     console.log(this.state.tableProps);
     return (<div>
-      <hr /><hr />
-      <div className="base-components">
-        <h2>基本组件:</h2>
-        <Button btnName="按钮" cssClass="btn-warning"/>
-        <Input disName="t1" name="t1" value="输入框"/>
-        <Tabs maxHeight="150px">
-              <Tab title="111" id="1">
-                  <p>456</p><p>456</p><p>456</p><p>456</p><p>456</p><p>456</p>
-              </Tab>
-              <Tab title="222" id="2" isActive={true}>
-                  <p>789</p>
-              </Tab>
-          </Tabs>
-          <Select data={selectData} defaultValue="2" onSelect={_onSelect}/>
+        <div className="base-components">
+            <h2>基本组件:</h2>
+            <hr /><hr />
+            <Button btnName="按钮" cssClass="btn-warning"/>
+            <Input disName="t1" name="t1" value="输入框"/>
+            <CheckboxGroup name="demo-checkboxgroup" inline={false} multi={true}>
+                <Checkbox id="1" dispName="checkbox1" value="1" onClick={this.checkboxClick}/>
+                <Checkbox id="2" dispName="checkbox2" value="2" onClick={this.checkboxClick}/>
+            </CheckboxGroup>
+            <Textarea rows="4" onChange={this.textareaChange}>
+                12234
+            </Textarea>
+            <Input disName="密码" isPassword={true} />
+            <Tabs maxHeight="150px">
+                  <Tab title="111" id="1">
+                      <p>456</p><p>456</p><p>456</p><p>456</p><p>456</p><p>456</p>
+                  </Tab>
+                  <Tab title="222" id="2" isActive={true}>
+                      <p>789</p>
+                  </Tab>
+            </Tabs>
+            <Select data={selectData} defaultValue="2" onSelect={_onSelect}/>
             <ExpressionSelect onSelect={_onSelect2}/>
             <div>
               <Autocomplete name="动态下拉" url="/api/test/autocomplete" /><Button btnName="获取下拉列表的值" doAction={_getAutoCompleteValue}/>
@@ -162,3 +179,5 @@ var Demo = React.createClass({
 
 React.render(<Demo />, document.getElementById('content'));
 
+// var BSSFrame = require("./BSSFrame/frame");
+// React.render(<BSSFrame />, document.getElementById('content'));

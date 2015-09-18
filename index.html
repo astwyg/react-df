@@ -1,21 +1,41 @@
 <!DOCTYPE html>
-
 <html>
 <head>
     <title>demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--BASE STYLE-->
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/treeview.css">
     <link rel="stylesheet" href="static/css/font-awesome.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--THEME STYLE-->
+    <link type="text/css" rel="stylesheet" href="static/theme/css/themes/style1/orange-blue.css" id="theme-change" class="style-change color-change"> <!--NOTE this file can NOT pack, if URI changed, also change main.js line 94-->
+
+    <link type="text/css" rel="stylesheet" href="static/theme/vendors/jquery-nestable/nestable.css">
+    <link type="text/css" rel="stylesheet" href="static/theme/css/style-responsive.css">
+    <link type="text/css" rel="stylesheet" href="static/theme/css/patch.css">
+    
+    
 </head>
 <body>
-	<div class="container">
-	    <h2>组件测试页面</h2>
-	    <div id="content"><!--Components will render here--></div>
-	    <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
-	    <script src="node_modules/jquery/dist/jquery.js"></script>
-	    <script src="/static/bundle.js"></script>
+    <div id="page-content" class="col-xs-6 col-xs-offset-2">
+        <div id="content"><!--Components will render here--></div>
     </div>
+    <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <!--created js in RAM-->
+    <script src="/static/bundle.js"></script>
+    <!--THEME js-->
+    <script src="static/theme/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/theme/vendors/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+    <script src="static/theme/js/html5shiv.js"></script>
+    <script src="static/theme/js/respond.min.js"></script>
+    <script src="static/theme/vendors/metisMenu/jquery.metisMenu.js"></script>
+    <script src="static/theme/vendors/jquery-cookie/jquery.cookie.js"></script>
+    <script src="static/theme/js/jquery.menu.js"></script>
+    <script src="static/theme/js/main.js"></script>
+    <script src="static/theme/vendors/jquery-nestable/jquery.nestable.js"></script>
+    <script src="static/theme/js/ui-nestable-list.js"></script>
+    <script src="static/theme/js/jquery-ui.js"></script>
 </body>
 </html>

@@ -35,6 +35,7 @@ var Input=React.createClass({
         return {
             onClick:null,
             cssClass : "input-nm",
+            isPassword: false,
 
         };
     },
@@ -100,7 +101,7 @@ var Input=React.createClass({
         };
         var v=this.state.defValue;
         var className = "form-control "+this.props.cssClass;
-        return <span>{name}<input  id={this.props.id} name={this.props.name} errorMsg={this.props.errorMsg} reg={this.props.reg} className={className} onChange={this._onChange} onClick={this.props.onClick}   value={v} 　/></span>;
+        return <span>{name}<input  id={this.props.id} name={this.props.name} errorMsg={this.props.errorMsg} reg={this.props.reg} className={className} onChange={this._onChange} onClick={this.props.onClick}   value={v}  type={this.props.isPassword?"password":null}/></span>;
     }
 });
 module.exports=Input;

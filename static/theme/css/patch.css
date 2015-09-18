@@ -1,0 +1,20 @@
+#topbar .navbar-header #logo span.logo-text {
+  display: block;
+  font-weight: bold;
+  font-family: auto;
+  font-size: 20px;
+}
+
+body{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+/*  overflow: hidden;*/
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.page-content, #sidebar{
+	overflow: auto;
+	min-height: auto;
+}
